@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int count;
+    cin>>count;
+    int *d=new int[count]{0};
+    int temp;
+    for(int i=0;i<count;++i)
+    {
+        cin>>temp;
+        d[i]=temp-1;
+    }
+    cin>>temp;
+    d[0]+=temp-1;
+    int m=d[0];
+    for(int i=1;i<count;++i)
+    {
+        cin>>temp;
+        d[i]+=temp-1;
+        if(d[i]<m) m=d[i];
+    }
+    cout<<m;
+    return 0;
+}
