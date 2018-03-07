@@ -17,3 +17,20 @@ int main()
     //}
     return 0;
 }
+
+//非正常
+#include <iostream>
+using namespace std;
+int main()
+{
+    int t1,t2;
+    cin>>t1>>t2;
+    if(min(t1,t2)<1||max(t1,t2)>1024)
+    {
+        cout<<-1;
+        return 0;
+    }
+    if(t1==t2) cout<<1;
+    else cout<<0;
+    return 0;
+}
